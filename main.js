@@ -37,6 +37,10 @@ const scrollToPortfolio = function () {
     document.querySelector('.portfoliowrapper').scrollIntoView();
 };
 
+const scrollToContact = function () {
+    document.querySelector('.contactme').scrollIntoView();
+};
+
 const observer = new IntersectionObserver (entries => {
     entries.forEach(entry => {
         const bar1 = document.querySelector('.animation-bar-1-span');
