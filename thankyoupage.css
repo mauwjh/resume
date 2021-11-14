@@ -1,0 +1,43 @@
+:root {
+  --white: #fff;
+  --gray: #24252A;
+  --blue: #0088a9;
+  --black: #000;
+  --lightgray: rgba(200, 200, 200, 1);
+  --darkgray: rgba(120,120,120,1);
+  --porcelain: rgba(236, 240, 241, 1);
+  --darkblue: rgba(28, 210, 255, 0.2);
+}
+
+body {
+  --fontColor: var(--white);
+  --background: var(--gray);
+  --fontHover: var(--blue);
+  --paragraphFontColor: var(--lightgray);
+  --timeline: var(--darkblue);
+  background: var(--background);
+  transition: 0.5s all;
+  margin: 0 auto;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+.submit {
+  text-decoration: none; background-color: rgba(197,206,206,1); font-family: Poppins, sans-serif;
+      font-weight: 600;
+      color: var(--fontColor);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+}
+
+.submit:hover {
+  color: var(--fontColor);
+  background-color: rgba(197,206,206,0.8);
+  transition: all 0.5s;
+}
