@@ -313,7 +313,7 @@ body {
     flex-direction: column;
     color: var(--fontColor);
     margin-left: 2%;
-    width: 48%;
+    width: 40%;
     max-width: 960px;
 }
 
@@ -446,7 +446,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    min-height: 100%;
     max-width: 1960px;
     margin-left: auto;
     margin-right: auto;
@@ -455,6 +457,7 @@ body {
 
 .professionalskillswrapper {
     width: 50%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -463,6 +466,7 @@ body {
 
 .technicalskillswrapper {
     width: 50%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -470,16 +474,20 @@ body {
 }
 
 .skillsheader {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     height: 20px;
     text-align: center;
     line-height: 20px;
-    font-weight: 300;
+    margin-bottom: 30px;
+    font-weight: 400;
     font-size: clamp(30px, 2vw, 30px);
     color: var(--fontColor);
 }
 
 .animation-bar-header {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -507,7 +515,7 @@ body {
     .skillsheader {
         height: 120px;
         line-height: 120px;
-        text-align: left;
+        text-align: center;
         max-width: 95%;
         min-width: 95%;
     }
@@ -1283,6 +1291,69 @@ body {
     flex-direction: column;
     margin: 0 auto;
     min-height: 40vh;
+}
+
+.project-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+}
+
+.project-card {
+    width: 45%;
+    height: 100%;
+    aspect-ratio: 1/1; 
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 90px;
+    background-color: grey;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    background-color:rgba(225, 225, 225, 0.9);
+    opacity: 0;
+    transition: 0.5s ease
+}
+
+.card-header {
+    font-size: clamp(0.8em, 2.5vw, 1.2em); 
+    font-weight: 600; 
+    margin-bottom: 20px;
+}
+
+.card-body {
+    font-size: clamp(0.8em, 2.5vw, 1.2em); 
+    font-weight: 400; 
+    line-height: 50px;  
+    margin-bottom: 20px
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1100px) {
+    .project-card {
+        width: 100%;
+        margin-bottom: 30px
+    }
+    .card-body {
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.card-details {
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .coming-soon{
